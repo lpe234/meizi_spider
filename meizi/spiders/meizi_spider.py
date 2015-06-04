@@ -13,7 +13,7 @@ __author__ = 'lpe234'
 
 class MeiziSpider(Spider):
 
-    name = 'meizi_spider'
+    name = 'meizi'
     start_urls = ['http://www.meizitu.com/']
 
     def parse(self, response):
