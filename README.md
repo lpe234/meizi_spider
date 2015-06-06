@@ -2,6 +2,7 @@
 获取([http://www.meizitu.com/](http://www.meizitu.com/))网站图片，并保存到本地文件夹(meizi_images)下。
 
 ##运行
+
 ```
 python run_spider.py  # 即可
 ```
