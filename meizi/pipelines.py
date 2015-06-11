@@ -8,12 +8,17 @@
 import os
 import urllib
 
+from meizi.spiders import meizi_spider, imooc_spider
+
 FILE_NAME = 'meizi_images'
 
 class MeiziPipeline(object):
     def process_item(self, item, spider):
-        abs_path = get_abs_path(item)
-        save_to_folder(item, abs_path)
+        if spider.name == meizi_spider.MeiziSpider.name:
+            abs_path = get_abs_path(item)
+            save_to_folder(item, abs_path)
+        elif spider.name == imooc_spider.ImoocSpider.name:
+            pass
         return item
 
 

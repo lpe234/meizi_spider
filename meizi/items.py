@@ -10,3 +10,8 @@ class MeiziItem(Item):
     # name = Field()
     name = Field()
     images = Field()
+
+
+class ImoocItem(Item):
+    title = Field()
+    videos = Field()

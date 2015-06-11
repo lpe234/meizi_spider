@@ -66,7 +66,7 @@ class MeiziSpider(Spider):
         for page in other_pages:
             try:
                 href = page.xpath('./@href').extract()[0]
-                href = urlparse.urlparse(href, response.url)
+                href = urlparse.urljoin(response.url, href)
                 if href:
                     yield Request(
                         url=href,

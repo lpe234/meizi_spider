@@ -6,9 +6,11 @@ from twisted.internet import reactor
 from scrapy.crawler import Crawler
 from scrapy import log, signals
 from meizi.spiders.meizi_spider import MeiziSpider
+from meizi.spiders.imooc_spider import ImoocSpider
 from scrapy.utils.project import get_project_settings
 
-spider = MeiziSpider()
+# spider = MeiziSpider()
+spider = ImoocSpider()
 settings = get_project_settings()
 crawler = Crawler(settings)
 crawler.signals.connect(reactor.stop, signal=signals.spider_closed)
